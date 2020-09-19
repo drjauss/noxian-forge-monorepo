@@ -1,0 +1,20 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "noxianForgeMonorepo",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "noxian-forge-monorepo",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
+  }
+}
