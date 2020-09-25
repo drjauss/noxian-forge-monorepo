@@ -26,9 +26,13 @@
               "apps/user-platform/src/assets"
             ],
             "styles": [
-              "apps/user-platform/src/styles.scss"
+              "apps/user-platform/src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
