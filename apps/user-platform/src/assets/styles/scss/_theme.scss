@@ -1,6 +1,8 @@
 @import './colors';
+@import './fonts';
 
 body,
 html {
   background: $greyish-black;
+  font-family: $open-sans;
 }
