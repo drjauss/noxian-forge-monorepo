@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DefaultTemplateComponent } from '../../templates/default/default-template.component';
-import { DefaultTemplateModule } from '../../templates/default/default-template.module';
+import { DefaultTemplateModule } from '../../templates/default/default-template.component.module';
 
 const routes: Routes = [
   {
