@@ -5,4 +5,23 @@ body,
 html {
   background: $greyish-black;
   font-family: $open-sans;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $lato;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+p {
+  text-align: justify;
 }
