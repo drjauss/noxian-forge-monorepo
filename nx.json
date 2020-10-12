@@ -25,10 +25,6 @@
     "user-platform": {
       "tags": []
     },
-    "user-platform-e2e": {
-      "tags": [],
-      "implicitDependencies": ["user-platform"]
-    },
     "api": {
       "tags": []
     },
