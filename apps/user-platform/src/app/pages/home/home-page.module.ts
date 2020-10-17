@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ComponentsModule } from '../../components/components.module';
 
-import { DefaultTemplateComponent } from '../../templates/default/default-template.component';
-import { DefaultTemplateModule } from '../../templates/default/default-template.component.module';
+import { TemplatesModule } from '../../templates/templates.module';
+
+import { HomePageContentWrapperComponent } from './home-page-content-wrapper/home-page-content-wrapper.component';
+import { HomePageComponent } from './home-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: DefaultTemplateComponent,
+    component: HomePageComponent,
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes), DefaultTemplateModule],
+  declarations: [HomePageComponent, HomePageContentWrapperComponent],
+  imports: [RouterModule.forChild(routes), TemplatesModule, ComponentsModule],
 })
 export class HomePageModule {}
