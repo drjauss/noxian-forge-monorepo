@@ -7,16 +7,32 @@
     <nav>
       <ul>
         <li>
-          <a href="/" class="active">Home</a>
+          <a
+            [routerLink]="[globalRoutes.HOME]"
+            [class.active]="currentRoute === globalRoutes.HOME"
+            >Home</a
+          >
         </li>
         <li>
-          <a href="/">Coaching</a>
+          <a
+            [routerLink]="[globalRoutes.COACHING]"
+            [class.active]="currentRoute === globalRoutes.COACHING"
+            >Coaching</a
+          >
         </li>
         <li>
-          <a href="/">Guides</a>
+          <a
+            [routerLink]="[globalRoutes.GUIDES]"
+            [class.active]="currentRoute === globalRoutes.GUIDES"
+            >Guides</a
+          >
         </li>
         <li>
-          <a href="/">About Me</a>
+          <a
+            [routerLink]="[globalRoutes.ABOUT]"
+            [class.active]="currentRoute === globalRoutes.ABOUT"
+            >About Me</a
+          >
         </li>
       </ul>
     </nav>
