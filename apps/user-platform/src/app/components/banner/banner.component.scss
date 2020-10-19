@@ -1,0 +1,133 @@
+@import '../../../assets/styles/scss/colors';
+
+:host {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 750px;
+
+  div.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img.banner-img {
+    opacity: 0.2;
+  }
+
+  div.image-container {
+    background: $dark-gray;
+    border: 2px solid $gold;
+    max-height: 598px;
+    position: relative;
+
+    &.current {
+      background: $black;
+
+      img.banner-img {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  button.nav-btn {
+    background: $dark-gray;
+    border: 2px solid $gold;
+    border-radius: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    color: $gold;
+    height: 57px;
+    text-align: center;
+    top: 42%;
+    margin: 10px 0;
+    padding: 0;
+    position: absolute;
+    width: 57px;
+    z-index: 1;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.previous-btn {
+      padding-left: 10px;
+      left: -31px;
+    }
+
+    &.next-btn {
+      padding: 1px 0 0 4px;
+      right: -31px;
+    }
+  }
+
+  div.overlay-box {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background: $black;
+    border: 2px solid $gold;
+    border-radius: 15px 15px 0 0;
+    bottom: 60px;
+    box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.4);
+    justify-self: center;
+    max-width: 850px;
+    z-index: 1;
+    padding: 20px;
+    position: absolute;
+
+    p.content {
+      color: $white;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    button.read-more-btn {
+      align-self: flex-end;
+      align-items: center;
+      background: none;
+      box-shadow: none;
+      border: none;
+      color: $gold;
+      column-gap: 5px;
+      cursor: pointer;
+      display: flex;
+      font-size: 16px;
+      font-weight: 600;
+      justify-content: flex-end;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  div.headline {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    color: $white;
+    text-transform: uppercase;
+    position: absolute;
+    max-width: 850px;
+    z-index: 1;
+
+    h1,
+    h2 {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      margin-top: 32px;
+    }
+  }
+}

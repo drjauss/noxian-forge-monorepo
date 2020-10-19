@@ -1,1 +1,88 @@
-Banner
+<div class="headline">
+  <h2>New Release</h2>
+  <h1>Combine regions to conquer</h1>
+</div>
+<div class="banner-container">
+  <ng-container *ngTemplateOutlet="previousImage"></ng-container>
+  <ng-container *ngTemplateOutlet="currentImage"></ng-container>
+  <ng-container *ngTemplateOutlet="nextImage"></ng-container>
+</div>
+<div class="overlay-box">
+  <ng-container *ngTemplateOutlet="overlayBox"></ng-container>
+</div>
+
+<ng-template #currentImage>
+  <div class="image-container current">
+    <img
+      class="banner-img"
+      src="/assets/images/banner/current.png"
+      alt="main image of the banner"
+    />
+    <ng-container *ngTemplateOutlet="navigationButtons"></ng-container>
+  </div>
+</ng-template>
+<ng-template #previousImage>
+  <div class="image-container">
+    <img
+      class="banner-img"
+      src="/assets/images/banner/previous.png"
+      alt="main image of the banner"
+    />
+  </div>
+</ng-template>
+<ng-template #nextImage>
+  <div class="image-container">
+    <img
+      class="banner-img"
+      src="/assets/images/banner/next.png"
+      alt="main image of the banner"
+    />
+  </div>
+</ng-template>
+<ng-template #navigationButtons>
+  <button class="nav-btn previous-btn">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      fill="currentColor"
+    >
+      <path d="M0 0h24v24H0z" fill="none" />
+      <path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z" />
+    </svg>
+  </button>
+  <button class="nav-btn next-btn">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      fill="currentColor"
+    >
+      <path d="M0 0h24v24H0z" fill="none" />
+      <path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" />
+    </svg>
+  </button>
+</ng-template>
+<ng-template #overlayBox>
+  <p class="content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Orci phasellus egestas
+    tellus rutrum. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam
+    purus. Consectetur adipiscing elit.
+  </p>
+  <button class="read-more-btn">
+    <span>Read more</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="16"
+      viewBox="0 0 24 24"
+      width="16"
+      fill="currentColor"
+    >
+      <path d="M0 0h24v24H0z" fill="none" />
+      <path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" />
+    </svg>
+  </button>
+</ng-template>
