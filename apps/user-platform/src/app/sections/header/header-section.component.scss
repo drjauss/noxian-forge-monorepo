@@ -13,13 +13,13 @@ header {
 
 .left-group {
   column-gap: 20px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .right-group {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
 
   nav {
     ul {

@@ -1,0 +1,62 @@
+@import '../../../assets/styles/scss/fonts';
+@import '../../../assets/styles/scss/colors';
+
+:host {
+  .carousel-container {
+    height: 598px;
+    background-image: url('/assets/images/carousel/noxus-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    .overlay {
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1.title {
+      font-family: $lato;
+      font-size: 40px;
+      font-weight: bold;
+      font-style: italic;
+      color: $white;
+    }
+
+    p.content,
+    span.author {
+      color: $white;
+      font-size: 18px;
+      font-style: italic;
+      text-align: center;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    span.author {
+      font-size: 22px;
+
+      &:before {
+        content: '- ';
+      }
+    }
+
+    .navigation-icons-bar {
+      padding: 30px;
+      position: absolute;
+      bottom: 0;
+
+      img {
+        filter: invert(0.5);
+
+        &.active {
+          filter: invert(0.8);
+        }
+      }
+    }
+  }
+}
