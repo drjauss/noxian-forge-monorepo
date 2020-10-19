@@ -1,0 +1,93 @@
+@import '../../../assets/styles/scss/colors';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .guides-container {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 100px 118px;
+    height: 585px;
+    background-color: $dark-gray;
+    border: 2px solid $gold;
+    box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.4);
+
+    .guides-title-bar {
+      display: flex;
+      align-items: center;
+      padding: 30px;
+
+      .guides-title {
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 38px;
+        line-height: 38px;
+        margin: 0;
+      }
+    }
+
+    .guides-content {
+      display: flex;
+      flex-direction: column;
+      column-gap: 20px;
+
+      .guide-item {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        height: 86px;
+        box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+        background-color: $black;
+        border: 2px solid $gold;
+        margin-bottom: 20px;
+        position: relative;
+        width: 105%;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          width: 106%;
+          box-shadow: 3px 6px 7px rgba(0, 0, 0, 0.4);
+          transition: all 0.3s ease-in-out;
+        }
+
+        .regions {
+          display: flex;
+          height: 100%;
+          width: 180px;
+          text-align: center;
+          border-right: 2px solid $gold;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .guide-title {
+          color: $white;
+          text-transform: uppercase;
+          font-size: 30px;
+          padding: 0 30px;
+        }
+      }
+
+      .action-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 60px;
+
+        div.view-more {
+          text-transform: uppercase;
+          color: $gold;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          column-gap: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
