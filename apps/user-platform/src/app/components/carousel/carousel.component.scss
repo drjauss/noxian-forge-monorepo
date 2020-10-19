@@ -52,6 +52,7 @@
 
       img {
         filter: invert(0.5);
+        cursor: pointer;
 
         &.active {
           filter: invert(0.8);
