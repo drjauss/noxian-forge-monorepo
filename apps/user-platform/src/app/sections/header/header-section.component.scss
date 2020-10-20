@@ -1,8 +1,12 @@
 @import '../../../assets/styles/scss/colors';
 @import '../../../assets/styles/scss/fonts';
 
+:host {
+  background: $greyish-black;
+}
+
 header {
-  padding: 25px 50px;
+  padding: 20px 50px;
   display: flex;
 
   > div {
@@ -14,6 +18,14 @@ header {
 .left-group {
   column-gap: 20px;
   align-items: center;
+
+  .logo-text {
+    max-width: 270px;
+  }
+
+  .logo-icon {
+    max-width: 100px;
+  }
 }
 
 .right-group {
@@ -22,7 +34,7 @@ header {
   align-items: center;
 
   nav {
-    margin-top: 30px;
+    margin-top: 27px;
 
     ul {
       list-style: none;

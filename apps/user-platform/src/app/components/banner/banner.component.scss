@@ -81,7 +81,7 @@
     p.content {
       color: $white;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 14px;
     }
 
     button.read-more-btn {
@@ -124,11 +124,13 @@
 
     h1,
     h2 {
+      text-align: center;
       margin: 0;
+      text-shadow: 3px 5px 6px rgba(0, 0, 0, 0.4);
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 35px;
     }
 
     h2 {
