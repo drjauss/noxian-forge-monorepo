@@ -1,5 +1,9 @@
 @import '../../../assets/styles/scss/colors';
 
+:host {
+  background-color: $greyish-black;
+}
+
 footer {
   padding-top: 60px;
 
