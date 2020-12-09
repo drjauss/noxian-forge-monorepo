@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { GuideFirestoreService } from '../firestore/guide.firestore.service';
+import { GuidesFirestoreService } from '../firestore/guides.firestore.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class GuideFacadeService {
-  constructor(private readonly guideFirestoreService: GuideFirestoreService) {}
+export class GuidesFacadeService {
+  constructor(private readonly guideFirestoreService: GuidesFirestoreService) {}
 
   public createGuide(data) {
     this.guideFirestoreService.createGuide(data);

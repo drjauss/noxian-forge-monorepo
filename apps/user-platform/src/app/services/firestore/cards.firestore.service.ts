@@ -11,16 +11,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class GuideFirestoreService {
-  private readonly collectionName = 'guides';
+export class CardsFirestoreService {
+  private readonly collectionName = 'cards';
 
   constructor(private readonly firestore: AngularFirestore) {}
 
-  public createGuide(data): Promise<DocumentReference<unknown>> {
+  public createCard(data): Promise<DocumentReference<unknown>> {
     return this.firestore.collection(this.collectionName).add(data);
   }
 
-  public getGuide(
+  public getCard(
     documentId: string
   ): Observable<Action<DocumentSnapshot<unknown>>> {
     return this.firestore
@@ -29,11 +29,11 @@ export class GuideFirestoreService {
       .snapshotChanges();
   }
 
-  public getGuides(): Observable<DocumentChangeAction<unknown>[]> {
+  public getCards(): Observable<DocumentChangeAction<unknown>[]> {
     return this.firestore.collection(this.collectionName).snapshotChanges();
   }
 
-  public updateGuide(documentId: string, data): Promise<void> {
+  public updateCard(documentId: string, data): Promise<void> {
     return this.firestore
       .collection(this.collectionName)
       .doc(documentId)

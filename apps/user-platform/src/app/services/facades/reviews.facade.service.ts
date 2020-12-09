@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ReviewFirestoreService } from '../firestore/review.firestore.service';
+import { ReviewsFirestoreService } from '../firestore/reviews.firestore.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ReviewFacadeService {
+export class ReviewsFacadeService {
   constructor(
-    private readonly regionFirestoreService: ReviewFirestoreService
+    private readonly regionFirestoreService: ReviewsFirestoreService
   ) {}
 
   public createReview(data) {

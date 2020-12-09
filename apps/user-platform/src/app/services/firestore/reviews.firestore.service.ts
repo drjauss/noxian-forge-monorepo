@@ -11,16 +11,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class RegionFirestoreService {
-  private readonly collectionName = 'regions';
+export class ReviewsFirestoreService {
+  private readonly collectionName = 'reviews';
 
   constructor(private readonly firestore: AngularFirestore) {}
 
-  public createRegion(data): Promise<DocumentReference<unknown>> {
+  public createReview(data): Promise<DocumentReference<unknown>> {
     return this.firestore.collection(this.collectionName).add(data);
   }
 
-  public getRegion(
+  public getReview(
     documentId: string
   ): Observable<Action<DocumentSnapshot<unknown>>> {
     return this.firestore
@@ -29,11 +29,11 @@ export class RegionFirestoreService {
       .snapshotChanges();
   }
 
-  public getRegions(): Observable<DocumentChangeAction<unknown>[]> {
+  public getReviews(): Observable<DocumentChangeAction<unknown>[]> {
     return this.firestore.collection(this.collectionName).snapshotChanges();
   }
 
-  public updateRegion(documentId: string, data): Promise<void> {
+  public updateReview(documentId: string, data): Promise<void> {
     return this.firestore
       .collection(this.collectionName)
       .doc(documentId)

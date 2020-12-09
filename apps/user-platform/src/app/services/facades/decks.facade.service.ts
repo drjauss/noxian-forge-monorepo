@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { DeckFirestoreService } from '../firestore/deck.firestore.service';
+import { DecksFirestoreService } from '../firestore/decks.firestore.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class DeckFacadeService {
-  constructor(private readonly deckFirestoreService: DeckFirestoreService) {}
+export class DecksFacadeService {
+  constructor(private readonly deckFirestoreService: DecksFirestoreService) {}
 
   public createDeck(data) {
     this.deckFirestoreService.createDeck(data);

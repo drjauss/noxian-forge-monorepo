@@ -11,16 +11,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class DeckFirestoreService {
-  private readonly collectionName = 'decks';
+export class LocalesFirestoreService {
+  private readonly collectionName = 'locales';
 
   constructor(private readonly firestore: AngularFirestore) {}
 
-  public createDeck(data): Promise<DocumentReference<unknown>> {
+  public createLocale(data): Promise<DocumentReference<unknown>> {
     return this.firestore.collection(this.collectionName).add(data);
   }
 
-  public getDeck(
+  public getLocale(
     documentId: string
   ): Observable<Action<DocumentSnapshot<unknown>>> {
     return this.firestore
@@ -29,11 +29,11 @@ export class DeckFirestoreService {
       .snapshotChanges();
   }
 
-  public getDecks(): Observable<DocumentChangeAction<unknown>[]> {
+  public getLocales(): Observable<DocumentChangeAction<unknown>[]> {
     return this.firestore.collection(this.collectionName).snapshotChanges();
   }
 
-  public updateDeck(documentId: string, data): Promise<void> {
+  public updateLocale(documentId: string, data): Promise<void> {
     return this.firestore
       .collection(this.collectionName)
       .doc(documentId)

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { RegionFirestoreService } from '../firestore/region.firestore.service';
+import { RegionsFirestoreService } from '../firestore/regions.firestore.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class RegionFacadeService {
+export class RegionsFacadeService {
   constructor(
-    private readonly regionFirestoreService: RegionFirestoreService
+    private readonly regionFirestoreService: RegionsFirestoreService
   ) {}
 
   public createRegion(data) {

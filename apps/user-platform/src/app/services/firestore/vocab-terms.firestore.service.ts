@@ -11,16 +11,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class ReviewFirestoreService {
-  private readonly collectionName = 'reviews';
+export class VocabTermsFirestoreService {
+  private readonly collectionName = 'vocabTerms';
 
   constructor(private readonly firestore: AngularFirestore) {}
 
-  public createReview(data): Promise<DocumentReference<unknown>> {
+  public createVocabTerm(data): Promise<DocumentReference<unknown>> {
     return this.firestore.collection(this.collectionName).add(data);
   }
 
-  public getReview(
+  public getVocabTerm(
     documentId: string
   ): Observable<Action<DocumentSnapshot<unknown>>> {
     return this.firestore
@@ -29,11 +29,11 @@ export class ReviewFirestoreService {
       .snapshotChanges();
   }
 
-  public getReviews(): Observable<DocumentChangeAction<unknown>[]> {
+  public getVocabTerms(): Observable<DocumentChangeAction<unknown>[]> {
     return this.firestore.collection(this.collectionName).snapshotChanges();
   }
 
-  public updateReview(documentId: string, data): Promise<void> {
+  public updateVocabTerm(documentId: string, data): Promise<void> {
     return this.firestore
       .collection(this.collectionName)
       .doc(documentId)
