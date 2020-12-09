@@ -6,22 +6,22 @@ import { VocabTermsFirestoreService } from '../firestore/vocab-terms.firestore.s
 })
 export class VocabTermsFacadeService {
   constructor(
-    private readonly guideFirestoreService: VocabTermsFirestoreService
+    private readonly vocabTermsFirestoreService: VocabTermsFirestoreService
   ) {}
 
   public createVocabTerm(data) {
-    this.guideFirestoreService.createVocabTerm(data);
+    this.vocabTermsFirestoreService.createVocabTerm(data);
   }
 
   public getVocabTerm(documentId: string) {
-    this.guideFirestoreService.getVocabTerm(documentId);
+    this.vocabTermsFirestoreService.getVocabTerm(documentId);
   }
 
   public getVocabTerms() {
-    this.guideFirestoreService.getVocabTerms();
+    this.vocabTermsFirestoreService.getVocabTerms();
   }
 
   public updateVocabTerm(documentId: string, data) {
-    this.guideFirestoreService.updateVocabTerm(documentId, data);
+    this.vocabTermsFirestoreService.updateVocabTerm(documentId, data);
   }
 }

@@ -6,22 +6,22 @@ import { SpellSpeedsFirestoreService } from '../firestore/spell-speeds.firestore
 })
 export class SpellSpeedsFacadeService {
   constructor(
-    private readonly guideFirestoreService: SpellSpeedsFirestoreService
+    private readonly spellSpeedsFirestoreService: SpellSpeedsFirestoreService
   ) {}
 
   public createSpellSpeed(data) {
-    this.guideFirestoreService.createSpellSpeed(data);
+    this.spellSpeedsFirestoreService.createSpellSpeed(data);
   }
 
   public getSpellSpeed(documentId: string) {
-    this.guideFirestoreService.getSpellSpeed(documentId);
+    this.spellSpeedsFirestoreService.getSpellSpeed(documentId);
   }
 
   public getSpellSpeeds() {
-    this.guideFirestoreService.getSpellSpeeds();
+    this.spellSpeedsFirestoreService.getSpellSpeeds();
   }
 
   public updateSpellSpeed(documentId: string, data) {
-    this.guideFirestoreService.updateSpellSpeed(documentId, data);
+    this.spellSpeedsFirestoreService.updateSpellSpeed(documentId, data);
   }
 }

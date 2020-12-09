@@ -5,21 +5,23 @@ import { LocalesFirestoreService } from '../firestore/locales.firestore.service'
   providedIn: 'root',
 })
 export class LocalesFacadeService {
-  constructor(private readonly deckFirestoreService: LocalesFirestoreService) {}
+  constructor(
+    private readonly localesFirestoreService: LocalesFirestoreService
+  ) {}
 
   public createLocale(data) {
-    this.deckFirestoreService.createLocale(data);
+    this.localesFirestoreService.createLocale(data);
   }
 
   public getLocale(documentId: string) {
-    this.deckFirestoreService.getLocale(documentId);
+    this.localesFirestoreService.getLocale(documentId);
   }
 
   public getLocales() {
-    this.deckFirestoreService.getLocales();
+    this.localesFirestoreService.getLocales();
   }
 
   public updateLocale(documentId: string, data) {
-    this.deckFirestoreService.updateLocale(documentId, data);
+    this.localesFirestoreService.updateLocale(documentId, data);
   }
 }

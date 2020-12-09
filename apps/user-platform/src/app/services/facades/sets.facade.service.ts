@@ -5,21 +5,21 @@ import { SetsFirestoreService } from '../firestore/sets.firestore.service';
   providedIn: 'root',
 })
 export class SetsFacadeService {
-  constructor(private readonly guideFirestoreService: SetsFirestoreService) {}
+  constructor(private readonly setsFirestoreService: SetsFirestoreService) {}
 
   public createSet(data) {
-    this.guideFirestoreService.createSet(data);
+    this.setsFirestoreService.createSet(data);
   }
 
   public getSet(documentId: string) {
-    this.guideFirestoreService.getSet(documentId);
+    this.setsFirestoreService.getSet(documentId);
   }
 
   public getSets() {
-    this.guideFirestoreService.getSets();
+    this.setsFirestoreService.getSets();
   }
 
   public updateSet(documentId: string, data) {
-    this.guideFirestoreService.updateSet(documentId, data);
+    this.setsFirestoreService.updateSet(documentId, data);
   }
 }

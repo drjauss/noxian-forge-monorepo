@@ -6,22 +6,22 @@ import { RegionsFirestoreService } from '../firestore/regions.firestore.service'
 })
 export class RegionsFacadeService {
   constructor(
-    private readonly regionFirestoreService: RegionsFirestoreService
+    private readonly regionsFirestoreService: RegionsFirestoreService
   ) {}
 
   public createRegion(data) {
-    this.regionFirestoreService.createRegion(data);
+    this.regionsFirestoreService.createRegion(data);
   }
 
   public getRegion(documentId: string) {
-    this.regionFirestoreService.getRegion(documentId);
+    this.regionsFirestoreService.getRegion(documentId);
   }
 
   public getRegions() {
-    this.regionFirestoreService.getRegions();
+    this.regionsFirestoreService.getRegions();
   }
 
   public updateRegion(documentId: string, data) {
-    this.regionFirestoreService.updateRegion(documentId, data);
+    this.regionsFirestoreService.updateRegion(documentId, data);
   }
 }

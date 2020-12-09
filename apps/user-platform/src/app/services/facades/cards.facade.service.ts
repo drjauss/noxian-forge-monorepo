@@ -5,21 +5,21 @@ import { CardsFirestoreService } from '../firestore/cards.firestore.service';
   providedIn: 'root',
 })
 export class CardsFacadeService {
-  constructor(private readonly deckFirestoreService: CardsFirestoreService) {}
+  constructor(private readonly cardsFirestoreService: CardsFirestoreService) {}
 
   public createCard(data) {
-    this.deckFirestoreService.createCard(data);
+    this.cardsFirestoreService.createCard(data);
   }
 
   public getCard(documentId: string) {
-    this.deckFirestoreService.getCard(documentId);
+    this.cardsFirestoreService.getCard(documentId);
   }
 
   public getCards() {
-    this.deckFirestoreService.getCards();
+    this.cardsFirestoreService.getCards();
   }
 
   public updateCard(documentId: string, data) {
-    this.deckFirestoreService.updateCard(documentId, data);
+    this.cardsFirestoreService.updateCard(documentId, data);
   }
 }

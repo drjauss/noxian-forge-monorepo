@@ -6,22 +6,22 @@ import { KeywordsFirestoreService } from '../firestore/keywords.firestore.servic
 })
 export class KeywordsFacadeService {
   constructor(
-    private readonly guideFirestoreService: KeywordsFirestoreService
+    private readonly keywordsFirestoreService: KeywordsFirestoreService
   ) {}
 
   public createKeyword(data) {
-    this.guideFirestoreService.createKeyword(data);
+    this.keywordsFirestoreService.createKeyword(data);
   }
 
   public getKeyword(documentId: string) {
-    this.guideFirestoreService.getKeyword(documentId);
+    this.keywordsFirestoreService.getKeyword(documentId);
   }
 
   public getKeywords() {
-    this.guideFirestoreService.getKeywords();
+    this.keywordsFirestoreService.getKeywords();
   }
 
   public updateKeyword(documentId: string, data) {
-    this.guideFirestoreService.updateKeyword(documentId, data);
+    this.keywordsFirestoreService.updateKeyword(documentId, data);
   }
 }

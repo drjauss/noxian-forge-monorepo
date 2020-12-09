@@ -5,21 +5,23 @@ import { GuidesFirestoreService } from '../firestore/guides.firestore.service';
   providedIn: 'root',
 })
 export class GuidesFacadeService {
-  constructor(private readonly guideFirestoreService: GuidesFirestoreService) {}
+  constructor(
+    private readonly guidesFirestoreService: GuidesFirestoreService
+  ) {}
 
   public createGuide(data) {
-    this.guideFirestoreService.createGuide(data);
+    this.guidesFirestoreService.createGuide(data);
   }
 
   public getGuide(documentId: string) {
-    this.guideFirestoreService.getGuide(documentId);
+    this.guidesFirestoreService.getGuide(documentId);
   }
 
   public getGuides() {
-    this.guideFirestoreService.getGuides();
+    this.guidesFirestoreService.getGuides();
   }
 
   public updateGuide(documentId: string, data) {
-    this.guideFirestoreService.updateGuide(documentId, data);
+    this.guidesFirestoreService.updateGuide(documentId, data);
   }
 }

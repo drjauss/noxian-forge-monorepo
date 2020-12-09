@@ -6,22 +6,22 @@ import { RaritiesFirestoreService } from '../firestore/rarities.firestore.servic
 })
 export class RaritiesFacadeService {
   constructor(
-    private readonly guideFirestoreService: RaritiesFirestoreService
+    private readonly raritiesFirestoreService: RaritiesFirestoreService
   ) {}
 
   public createRarity(data) {
-    this.guideFirestoreService.createRarity(data);
+    this.raritiesFirestoreService.createRarity(data);
   }
 
   public getRarity(documentId: string) {
-    this.guideFirestoreService.getRarity(documentId);
+    this.raritiesFirestoreService.getRarity(documentId);
   }
 
   public getRarities() {
-    this.guideFirestoreService.getRarities();
+    this.raritiesFirestoreService.getRarities();
   }
 
   public updateRarity(documentId: string, data) {
-    this.guideFirestoreService.updateRarity(documentId, data);
+    this.raritiesFirestoreService.updateRarity(documentId, data);
   }
 }

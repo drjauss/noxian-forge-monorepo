@@ -6,22 +6,22 @@ import { ReviewsFirestoreService } from '../firestore/reviews.firestore.service'
 })
 export class ReviewsFacadeService {
   constructor(
-    private readonly regionFirestoreService: ReviewsFirestoreService
+    private readonly reviewsFirestoreService: ReviewsFirestoreService
   ) {}
 
   public createReview(data) {
-    this.regionFirestoreService.createReview(data);
+    this.reviewsFirestoreService.createReview(data);
   }
 
   public getReview(documentId: string) {
-    this.regionFirestoreService.getReview(documentId);
+    this.reviewsFirestoreService.getReview(documentId);
   }
 
   public getReviews() {
-    this.regionFirestoreService.getReviews();
+    this.reviewsFirestoreService.getReviews();
   }
 
   public updateReview(documentId: string, data) {
-    this.regionFirestoreService.updateReview(documentId, data);
+    this.reviewsFirestoreService.updateReview(documentId, data);
   }
 }
