@@ -7,6 +7,7 @@ import {
   DocumentSnapshot,
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { Guide } from '../../models/entities/guide.model';
 
 @Injectable({
   providedIn: 'root',
@@ -29,8 +30,8 @@ export class GuidesFirestoreService {
       .snapshotChanges();
   }
 
-  public getGuides(): Observable<DocumentChangeAction<unknown>[]> {
-    return this.firestore.collection(this.collectionName).snapshotChanges();
+  public getGuides(): Observable<DocumentChangeAction<Guide>[]> {
+    return this.firestore.collection<Guide>(this.collectionName).valueChanges();
   }
 
   public updateGuide(documentId: string, data): Promise<void> {
